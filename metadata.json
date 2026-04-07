@@ -1,0 +1,5 @@
+{
+  "name": "FFapi - 一站式 AI 模型接入平台",
+  "description": "提供统一的 AI API 接口，支持 GPT-4o、Claude、Gemini、DeepSeek 等主流模型。低价稳定，兼容 OpenAI 格式。",
+  "requestFramePermissions": []
+}
