@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <path
+    d="M21.052 11.79V5.916a.05.05 0 0 0-.025-.042L10.55.006A.05.05 0 0 0 10.525 0v2.458c0 4.769 3.986 9.326 8.903 9.326a8.32 8.32 0 0 0-.296.005z"
+    fill="url(#zhipu-a)"
+  />
+  <path
+    d="M0 11.79v6.083c0 .018.01.035.024.044L10.5 23.993c.008.005.017.007.025.007v-2.546c0-4.94-3.985-9.659-8.902-9.659.099 0 .198-.002.296-.006z"
+    fill="url(#zhipu-b)"
+  />
+  <path
+    d="M0 11.79V5.916c0-.017.01-.033.024-.042L10.5.006A.05.05 0 0 1 10.525 0v2.458c0 4.769-3.985 9.326-8.902 9.326.099 0 .198.002.296.005z"
+    fill="url(#zhipu-c)"
+  />
+  <path
+    d="M21.052 11.79v6.083a.05.05 0 0 1-.025.044L10.55 23.993a.05.05 0 0 1-.025.007v-2.546c0-4.94 3.986-9.659 8.903-9.659-.1 0-.198-.002-.296-.006z"
+    fill="url(#zhipu-d)"
+  />
+  <path
+    d="M10.527 2.458c0 4.769 3.986 9.326 8.903 9.326l-.296.005c.098.004.197.006.296.006-4.917 0-8.902 4.72-8.903 9.66 0-4.896-3.915-9.574-8.772-9.656l-.001-.006.167-.003a7.809 7.809 0 0 0-.167-.003V11.78c4.857-.079 8.773-4.595 8.773-9.322"
+    fill="#F7F8FA"
+  />
+  <defs>
+    <linearGradient id="zhipu-a" x1="9.938" y1=".565" x2="20.463" y2="7.686" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#988EFF" />
+      <stop offset="1" stop-color="#2153DD" />
+    </linearGradient>
+    <linearGradient id="zhipu-b" x1="9.348" y1="21.242" x2="-1.571" y2="11.426" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8EAEFF" />
+      <stop offset="1" stop-color="#2199DD" />
+    </linearGradient>
+    <linearGradient id="zhipu-c" x1="1.283" y1="11.79" x2="9.869" y2="-.121" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#988EFF" />
+      <stop offset="1" stop-color="#2153DD" />
+    </linearGradient>
+    <linearGradient id="zhipu-d" x1="21.052" y1="11.298" x2="10.766" y2="23.796" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8EA7FF" />
+      <stop offset="1" stop-color="#2161DD" />
+    </linearGradient>
+  </defs>
+</svg>
