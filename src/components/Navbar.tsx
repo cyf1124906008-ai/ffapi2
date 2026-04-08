@@ -1,14 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { LOGIN_PATH, REGISTER_PATH } from "@/lib/auth-links";
 import type { Locale } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
-
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 
 export function Navbar({
   locale,
@@ -67,12 +66,12 @@ export function Navbar({
             <Globe className="h-4 w-4" />
             {locale === "zh" ? "EN" : "中文"}
           </button>
-          <a href={`${BACKEND_URL}/login`}>
+          <a href={LOGIN_PATH}>
             <Button variant="ghost" size="sm" className="text-sm">
               {d.login}
             </Button>
           </a>
-          <a href={`${BACKEND_URL}/register`}>
+          <a href={REGISTER_PATH}>
             <Button
               size="sm"
               className="bg-gradient-to-r from-blue-500 to-violet-600 hover:from-blue-600 hover:to-violet-700 text-white rounded-xl transition-all duration-300 hover:shadow-[0_0_20px_rgba(99,102,241,0.3)]"
@@ -122,12 +121,12 @@ export function Navbar({
               {locale === "zh" ? "EN" : "中文"}
             </button>
             <div className="flex gap-2 pt-2">
-              <a href={`${BACKEND_URL}/login`} className="flex-1">
+              <a href={LOGIN_PATH} className="flex-1">
                 <Button variant="ghost" size="sm" className="w-full">
                   {d.login}
                 </Button>
               </a>
-              <a href={`${BACKEND_URL}/register`} className="flex-1">
+              <a href={REGISTER_PATH} className="flex-1">
                 <Button
                   size="sm"
                   className="w-full bg-gradient-to-r from-blue-500 to-violet-600 text-white"

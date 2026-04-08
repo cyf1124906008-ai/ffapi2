@@ -13,9 +13,7 @@ import {
   Terminal,
   Zap,
 } from "lucide-react";
-
-const BACKEND_URL =
-  process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
+import { LOGIN_PATH, REGISTER_PATH } from "@/lib/auth-links";
 
 let globalScrollProgress = 0;
 
@@ -788,7 +786,7 @@ function LandingPageContent() {
               <Languages className="h-3.5 w-3.5" />
               {lang === "en" ? "ZH" : "EN"}
             </button>
-            <a href={`${BACKEND_URL}/register`}>
+            <a href={REGISTER_PATH}>
               <Button
                 size="sm"
                 className="h-8 rounded-full bg-white px-4 text-[11px] font-bold text-black transition-transform hover:bg-white/90 active:scale-95"
@@ -819,7 +817,7 @@ function LandingPageContent() {
             {t.hero.desc}
           </p>
           <div className="mt-12 flex items-center justify-center gap-8">
-            <a href={`${BACKEND_URL}/register`}>
+            <a href={REGISTER_PATH}>
               <Button className="rounded-full bg-[#0071e3] px-8 py-6 text-sm font-semibold text-white transition-all hover:bg-[#0077ed] active:scale-95">
                 {t.hero.cta}
               </Button>
@@ -1171,7 +1169,7 @@ function LandingPageContent() {
             </div>
             <div className="flex flex-col items-center justify-between gap-8 bg-white/[0.02] p-8 md:flex-row md:p-12">
               <div className="text-sm text-[#86868b]">{t.pricing.custom}</div>
-              <a href={`${BACKEND_URL}/register`}>
+              <a href={REGISTER_PATH}>
                 <Button className="rounded-full bg-white px-10 py-6 font-semibold text-black transition-transform hover:bg-white/90 active:scale-95">
                   {t.pricing.sales}
                 </Button>
@@ -1236,7 +1234,7 @@ function LandingPageContent() {
                   </li>
                   <li>
                     <a
-                      href={`${BACKEND_URL}/login`}
+                      href={LOGIN_PATH}
                       className="transition-colors hover:text-white"
                     >
                       Login
@@ -1244,7 +1242,7 @@ function LandingPageContent() {
                   </li>
                   <li>
                     <a
-                      href={`${BACKEND_URL}/register`}
+                      href={REGISTER_PATH}
                       className="transition-colors hover:text-white"
                     >
                       Register

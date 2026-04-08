@@ -4,11 +4,10 @@ import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight, Zap, Shield, DollarSign, Code2, Layers, Headphones } from "lucide-react";
+import { LOGIN_PATH, REGISTER_PATH } from "@/lib/auth-links";
 import { Button } from "@/components/ui/button";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 
 const models = [
   { name: "GPT-5.4", vendor: "OpenAI", color: "#10b981" },
@@ -150,8 +149,8 @@ export function FullPageScroll() {
           <div className="hidden sm:flex items-center gap-6 text-[13px]">
             <a href="/docs" className="opacity-50 hover:opacity-100 transition-opacity">文档</a>
             <a href="/docs/pricing" className="opacity-50 hover:opacity-100 transition-opacity">定价</a>
-            <a href={`${BACKEND_URL}/login`} className="opacity-50 hover:opacity-100 transition-opacity">登录</a>
-            <a href={`${BACKEND_URL}/register`} className={`px-4 py-1.5 rounded-full text-[12px] font-medium transition-all ${navDark ? "bg-white text-black hover:bg-white/90" : "bg-[#222] text-white hover:bg-[#333]"}`}>注册</a>
+            <a href={LOGIN_PATH} className="opacity-50 hover:opacity-100 transition-opacity">登录</a>
+            <a href={REGISTER_PATH} className={`px-4 py-1.5 rounded-full text-[12px] font-medium transition-all ${navDark ? "bg-white text-black hover:bg-white/90" : "bg-[#222] text-white hover:bg-[#333]"}`}>注册</a>
           </div>
         </div>
       </nav>
@@ -280,7 +279,7 @@ export function FullPageScroll() {
             </h2>
             <p className="fp-anim mt-6 text-xl sm:text-2xl text-white/40 font-light">注册即送免费额度，3 分钟完成接入</p>
             <div className="fp-anim mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href={`${BACKEND_URL}/register`}>
+              <a href={REGISTER_PATH}>
                 <Button size="lg" className="group bg-white text-black px-10 py-6 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(255,255,255,0.15)]">
                   <span className="flex items-center">免费开始<ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" /></span>
                 </Button>

@@ -80,16 +80,16 @@ function extractGeminiText(data: GeminiResponse) {
 
 async function forwardToFfapi(prompt: string) {
   const apiKey = process.env.FFAPI_PLAYGROUND_API_KEY;
+  const configuredBaseUrl =
+    process.env.FFAPI_PLAYGROUND_API_BASE_URL ||
+    process.env.NEXT_PUBLIC_BACKEND_URL ||
+    process.env.NEXT_PUBLIC_API_BASE_URL;
 
-  if (!apiKey) {
+  if (!apiKey || !configuredBaseUrl) {
     return null;
   }
 
-  const baseUrl = trimTrailingSlash(
-    process.env.FFAPI_PLAYGROUND_API_BASE_URL ||
-      process.env.NEXT_PUBLIC_BACKEND_URL ||
-      "http://localhost:3001",
-  );
+  const baseUrl = trimTrailingSlash(configuredBaseUrl);
   const model = process.env.FFAPI_PLAYGROUND_MODEL || "gemini-2.5-flash";
 
   const response = await fetch(`${baseUrl}/v1/chat/completions`, {

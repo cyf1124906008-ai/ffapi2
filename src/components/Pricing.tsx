@@ -2,11 +2,10 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import { REGISTER_PATH } from "@/lib/auth-links";
 import type { Locale } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
-
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 
 const pricingData = [
   { model: "GPT-4o", input: "$0.75", output: "$3.00" },
@@ -71,7 +70,7 @@ export function Pricing({ locale }: { locale: Locale }) {
             </tbody>
           </table>
           <div className="flex justify-center border-t border-white/[0.06] px-6 py-5">
-            <a href={`${BACKEND_URL}/register`}>
+            <a href={REGISTER_PATH}>
               <Button className="bg-gradient-to-r from-blue-500 to-violet-600 text-white px-8 py-5 text-base font-semibold rounded-xl transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_40px_rgba(99,102,241,0.3)]">
                 {d.cta}
               </Button>

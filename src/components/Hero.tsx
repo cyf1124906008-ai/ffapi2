@@ -4,10 +4,9 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { REGISTER_PATH } from "@/lib/auth-links";
 import type { Locale } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
-
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 
 export function Hero({ locale }: { locale: Locale }) {
   const d = t(locale).hero;
@@ -68,7 +67,7 @@ export function Hero({ locale }: { locale: Locale }) {
           className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center animate-fade-up"
           style={{ animationDelay: "0.8s", animationFillMode: "both" }}
         >
-          <a href={`${BACKEND_URL}/register`}>
+          <a href={REGISTER_PATH}>
             <Button
               size="lg"
               className="group relative overflow-hidden bg-gradient-to-r from-blue-500 to-violet-600 text-white px-10 py-6 text-lg font-semibold rounded-2xl transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(99,102,241,0.4)]"

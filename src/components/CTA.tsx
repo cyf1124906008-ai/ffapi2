@@ -3,9 +3,8 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { REGISTER_PATH } from "@/lib/auth-links";
 import type { Locale } from "@/lib/i18n";
-
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 
 export function CTA({ locale }: { locale: Locale }) {
   const isZh = locale === "zh";
@@ -36,7 +35,7 @@ export function CTA({ locale }: { locale: Locale }) {
           {isZh ? "注册即送免费额度，3 分钟完成接入。无需信用卡，无需订阅。" : "Free credits on signup. Integrate in 3 minutes. No credit card, no subscription."}
         </motion.p>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} viewport={{ once: true }}>
-          <a href={`${BACKEND_URL}/register`}>
+          <a href={REGISTER_PATH}>
             <Button size="lg" className="group bg-gradient-to-r from-blue-500 to-violet-600 text-white px-10 py-6 text-lg font-semibold rounded-2xl transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(99,102,241,0.4)]">
               <span className="flex items-center">{isZh ? "免费开始" : "Get Started Free"}<ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" /></span>
             </Button>
