@@ -4,6 +4,7 @@ function trimTrailingSlash(value: string) {
 
 export const LOGIN_PATH = "/login";
 export const REGISTER_PATH = "/register";
+export const CONSOLE_PATH = "/console";
 
 export function getExternalConsoleOrigin() {
   const value =
@@ -26,4 +27,14 @@ export function getExternalAuthUrl(path: string) {
   }
 
   return `${origin}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
+export function getExternalConsoleUrl() {
+  const origin = getExternalConsoleOrigin();
+
+  if (!origin) {
+    return null;
+  }
+
+  return `${origin}${CONSOLE_PATH}`;
 }
