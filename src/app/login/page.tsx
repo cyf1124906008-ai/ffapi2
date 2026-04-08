@@ -2,6 +2,8 @@ import { redirect } from "next/navigation";
 import { ConsoleFallback } from "@/components/console/ConsoleFallback";
 import { getExternalAuthUrl, REGISTER_PATH } from "@/lib/auth-links";
 
+export const dynamic = "force-dynamic";
+
 export default function LoginPage() {
   const target = getExternalAuthUrl("/login");
 
